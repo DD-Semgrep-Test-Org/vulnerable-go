@@ -1,14 +1,13 @@
 package main
 
 import (
-	"os"
+	"fmt"
 	"os/exec"
-	"strings"
 )
 
 func main() {
-	command := os.Getenv("COMMAND")
-	pieces := strings.Fields(command)
-	cmd := exec.Command(pieces[0], pieces[1:]...)
+	cmd := exec.Command("ls", "/home")
 	cmd.Run()
+
+	fmt.Printf("Now I fix the vuln...")
 }
