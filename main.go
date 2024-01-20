@@ -13,4 +13,6 @@ func main() {
 	cmd.Run()
 
 	fmt.Printf("%s\n", html.UnescapeString("&nbsp;"))
+
+	print("oh no")
 }
